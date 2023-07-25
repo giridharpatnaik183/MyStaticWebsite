@@ -42,5 +42,6 @@ jobs:
         run: |
           # Replace '.' with the path to your build artifacts
            aws s3 sync . s3://staticwebpageassignment4 --delete
+           echo "test"
 
       # ... Add more steps if needed ...
