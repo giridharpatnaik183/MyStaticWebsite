@@ -17,6 +17,4 @@ jobs:
 
 # Define the Build steps
       - name: Build Website
-        run: npm run build  # Replace this command with the appropriate build command for your JavaScript project
-
-
+        run: node script.js  # Replace `script.js` with the appropriate JavaScript build script for your project
