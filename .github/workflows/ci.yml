@@ -11,17 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:  # Set environment variables here
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-# Define the Build steps
-      - name: Build Website
-        run: |
-          # Replace these commands with the appropriate build commands for your project
-          # For example, you can use tools like webpack, parcel, or rollup to bundle your HTML, CSS, and JS files.
-          # Replace `index.html`, `styles.css`, and `script.js` with the actual filenames of your HTML, CSS, and JS files.
-          echo "Building the website..."
-          cat index.html  # This is just an example; you may have a more complex build process.
-          cat styles.css
-          cat script.js
+      # ... Add more build steps or commands here ...
