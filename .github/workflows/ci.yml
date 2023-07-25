@@ -1,25 +1,22 @@
+# Define the Trigger
 name: Continuous Integration
 
 on:
   push:
     branches:
       - main  # Adjust this branch name based on your project's main branch
-
+      
+# Specify the Environment
 jobs:
   build:
-    runs-on: ubuntu-latest  # You can also choose other operating systems like macOS or Windows
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set Up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14  # Adjust the version as per your project's requirements
+# Define the Build steps
+      - name: Build Website
+        run: npm run build  # Replace this command with the appropriate build command for your JavaScript project
 
-      - name: Install Dependencies
-        run: npm install
 
-      - name: Run Tests
-        run: npm test
