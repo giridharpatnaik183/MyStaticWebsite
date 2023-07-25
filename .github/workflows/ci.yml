@@ -30,7 +30,7 @@ jobs:
           echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
           echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
           aws configure list
-          # new changes
+          # new change
 
       # Step 3: Upload artifacts to S3
       - name: Upload artifacts to S3
