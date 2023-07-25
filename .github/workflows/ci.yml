@@ -1,0 +1,25 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main  # Adjust this branch name based on your project's main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can also choose other operating systems like macOS or Windows
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14  # Adjust the version as per your project's requirements
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
