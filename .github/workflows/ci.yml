@@ -37,6 +37,6 @@ jobs:
       - name: Upload artifacts to S3
         run: |
           # Replace 'artifacts_folder' with the path to your build artifacts
-         aws s3 sync https://github.com/giridharpatnaik183/MyStaticWebsite.git s3://staticwebpageassignment4
+         aws s3 sync MyStaticWebsite s3://staticwebpageassignment4
 
       # ... Add more steps if needed ...
