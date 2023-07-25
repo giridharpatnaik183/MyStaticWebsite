@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', function() {
-    alert('Welcome to My Website!');
+    alert('Welcome to Assignment 4!');
 });
