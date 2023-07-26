@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         env:
-           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+           # AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            AWS_DEFAULT_REGION: 'eu-north-1'
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifacts to S3
         run: |
           # Replace '.' with the path to your build artifacts
-          # aws s3 sync . s3://staticwebpageassignment4
+           aws s3 sync . s3://staticwebpagebucket
           echo "test"
 
       # ... Add more steps if needed ...
