@@ -22,8 +22,9 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
         aws-region: us-east-1
-
+            echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
+            echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
  
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync . s3://staticwebpageassignment4 --delete
+      run: aws s3 sync . s3://staticwebpagebucket --delete
