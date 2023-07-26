@@ -31,7 +31,7 @@ jobs:
         run: |
           #aws configure set aws_access_key_id AKIAWS2ZE5YLENPY2EB2
           #aws configure set aws_secret_access_key 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
-          aws configure set default.region us-east-1
+          aws configure set default.region eu-north-1
           echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
           echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
           aws configure list
